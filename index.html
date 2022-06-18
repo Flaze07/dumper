@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input" />
+    <input class="output" type="text" disabled />
+    <script>
+        document.getElementsByClassName("input")[0].addEventListener("keydown", function keyDown(e) {
+            inp = document.getElementsByClassName("output")[0]
+            inp.value = e.code
+            console.log(e.code)
+        })
+        document.getElementsByClassName("input")[0].addEventListener("keydown", function keyDown(e) {
+            if(e.code === "") {
+                if(e.key === "Enter") {
+                    window.dispatchEvent(new KeyboardEvent('keydown', {
+                      'key': e.key
+                    }));
+                }
+            }
+        })
+    </script>
+</body>
+</html>
