@@ -20,7 +20,7 @@
                 console.log(`latest input is ${e.target.value[e.target.value.length - 1]}`)
                 if(e.target.value[e.target.value.length - 1] === ".") {
                     document.getElementsByClassName("input")[0].dispatchEvent(new KeyboardEvent('keydown', {
-                      'key': "Enter"
+                      'code': "Enter"
                     }));
                     console.log("called")
                 }
