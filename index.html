@@ -18,7 +18,7 @@
             if(e.code.length === 0) {
                 console.log(`key is ${e.which}`)
                 console.log(`latest input is ${e.target.value[e.target.value.length - 1]}`)
-                if(e.key === ".") {
+                if(e.target.value[e.target.value.length - 1] === ".") {
                     document.getElementsByClassName("input")[0].dispatchEvent(new KeyboardEvent('keydown', {
                       'key': "Enter"
                     }));
