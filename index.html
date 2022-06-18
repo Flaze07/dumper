@@ -16,7 +16,7 @@
         })
         document.getElementsByClassName("input")[0].addEventListener("keydown", function keyDown(e) {
             if(e.code.length === 0) {
-                console.log(`key is {e.key}`)
+                console.log(`key is ${e.key}`)
                 if(e.key === ".") {
                     window.dispatchEvent(new KeyboardEvent('keydown', {
                       'key': "Enter"
