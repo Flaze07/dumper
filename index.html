@@ -13,14 +13,14 @@
             inp = document.getElementsByClassName("output")[0]
             inp.value = e.code
             console.log(e.code)
-            console.log(e.code.length)
         })
         document.getElementsByClassName("input")[0].addEventListener("keydown", function keyDown(e) {
-            if(e.code === "") {
+            if(e.code.length === 0) {
                 if(e.key === "Enter") {
                     window.dispatchEvent(new KeyboardEvent('keydown', {
                       'key': e.key
                     }));
+                    console.log("called")
                 }
             }
         })
